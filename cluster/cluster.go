@@ -19,8 +19,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mediocregopher/radix.v2/pool"
-	"github.com/mediocregopher/radix.v2/redis"
+	"github.com/cgrates/radix.v2/pool"
+	"github.com/cgrates/radix.v2/redis"
 )
 
 type mapping [NumSlots]string

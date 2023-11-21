@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/mediocregopher/radix.v2/cluster"
-	"github.com/mediocregopher/radix.v2/redis"
+	"github.com/cgrates/radix.v2/cluster"
+	"github.com/cgrates/radix.v2/redis"
 )
 
 // ScanOpts are various parameters which can be passed into ScanWithOpts. Some
@@ -149,7 +149,6 @@ func scanCluster(c *cluster.Cluster, ch chan string, o ScanOpts) error {
 //	if err != nil {
 //		// handle error
 //	}
-//
 func Scan(r Cmder, ch chan string, cmd, key, pattern string) error {
 	// We're using ScanOpts here for esoteric reasons, this whole thing is
 	// deprecated anyway, so who cares.

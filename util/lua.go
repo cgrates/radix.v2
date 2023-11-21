@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"strings"
 
-	"github.com/mediocregopher/radix.v2/redis"
+	"github.com/cgrates/radix.v2/redis"
 )
 
 // LuaEval calls EVAL on the given Cmder for the given script, passing the key
@@ -20,7 +20,6 @@ import (
 // Client, Pool, and Cluster.
 //
 //	r := util.LuaEval(c, `return redis.call('GET', KEYS[1])`, 1, "foo")
-//
 func LuaEval(c Cmder, script string, keys int, args ...interface{}) *redis.Resp {
 	mainKey, _ := redis.KeyFromArgs(args...)
 

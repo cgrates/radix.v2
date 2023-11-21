@@ -7,9 +7,9 @@
 //
 // To import inside your package do:
 //
-//	import "github.com/mediocregopher/radix.v2/redis"
+//	import "github.com/cgrates/radix.v2/redis"
 //
-// Connecting
+// # Connecting
 //
 // Use either Dial or DialTimeout:
 //
@@ -21,7 +21,7 @@
 // Make sure to call Close on the client if you want to clean it up before the
 // end of the program.
 //
-// Cmd and Resp
+// # Cmd and Resp
 //
 // The Cmd method returns a Resp, which has methods for converting to various
 // types. Each of these methods returns an error which can either be a
@@ -41,7 +41,7 @@
 //		// handle err
 //	}
 //
-// Array Replies
+// # Array Replies
 //
 // The elements to Array replies can be accessed as strings using List or
 // ListBytes, or you can use the Array method for more low level access:
@@ -64,7 +64,7 @@
 //		fmt.Println(elemStr)
 //	}
 //
-// Pipelining
+// # Pipelining
 //
 // Pipelining is when the client sends a bunch of commands to the server at
 // once, and only once all the commands have been sent does it start reading the
@@ -94,7 +94,7 @@
 //		// handle err
 //	}
 //
-// Flattening
+// # Flattening
 //
 // Radix will automatically flatten passed in maps and slices into the argument
 // list. For example, the following are all equivalent:
